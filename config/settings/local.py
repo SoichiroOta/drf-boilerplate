@@ -40,3 +40,10 @@ __all__ = [
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+
+DEFAULTS = {
+  'DEFAULT_RENDERER_CLASSES': [
+      'rest_framework.renderers.JSONRenderer',
+      'rest_framework.renderers.BrowsableAPIRenderer'
+  ]
+}
