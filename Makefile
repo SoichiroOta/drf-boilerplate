@@ -34,3 +34,7 @@ format:
 	make install
 	docker-compose run --rm web poetry run isort apiv1 config manage.py
 	docker-compose run --rm web poetry run black apiv1 config manage.py
+
+check-deploy:
+	export DJANGO_SETTINGS_MODULE=config.settings.production
+	docker-compose run --rm web poetry run python manage.py check --deploy
