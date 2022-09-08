@@ -11,7 +11,7 @@ services:
       - POSTGRES_PASSWORD=password
   web:
     build: .
-    command: poetry run python3 manage.py runserver 0.0.0.0:8000
+    command: poetry run python3 manage.py runserver 0.0.0.0:8000 --settings config.settings.local
     volumes:
       - .:/opt/app
     ports:
