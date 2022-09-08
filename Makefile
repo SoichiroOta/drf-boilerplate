@@ -25,12 +25,12 @@ test:
 
 lint:
 	make install
-	docker-compose run --rm web poetry run flake8 apiv1 drf_boilerplate manage.py
-	docker-compose run --rm web poetry run isort --check --diff apiv1 drf_boilerplate manage.py
-	docker-compose run --rm web poetry run black --check apiv1 drf_boilerplate manage.py
-	docker-compose run --rm web poetry run mypy apiv1 drf_boilerplate manage.py
+	docker-compose run --rm web poetry run flake8 apiv1 config manage.py
+	docker-compose run --rm web poetry run isort --check --diff apiv1 config manage.py
+	docker-compose run --rm web poetry run black --check apiv1 config manage.py
+	docker-compose run --rm web poetry run mypy apiv1 config manage.py
 
 format:
 	make install
-	docker-compose run --rm web poetry run isort apiv1 drf_boilerplate manage.py
-	docker-compose run --rm web poetry run black apiv1 drf_boilerplate manage.py
+	docker-compose run --rm web poetry run isort apiv1 config manage.py
+	docker-compose run --rm web poetry run black apiv1 config manage.py
