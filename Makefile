@@ -40,6 +40,7 @@ docker-check-deploy:
 	docker-compose run --rm web poetry run python manage.py check --deploy
 
 docker-generateschema:
+	make docker-poetry-install
 	docker-compose run --rm web poetry run python manage.py generateschema > openapi-schema.yml
 
 docker-graph-models:
