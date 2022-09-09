@@ -46,3 +46,7 @@ docker-generateschema:
 docker-graph-models:
 	make docker-poetry-install
 	docker-compose run --rm web poetry run python manage.py graph_models -a -o erd.png
+
+docker-show-urls:
+	make docker-poetry-install
+	docker-compose run --rm web poetry run python manage.py show_urls
