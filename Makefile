@@ -20,18 +20,18 @@ docker-db-migrate:
 	docker-compose exec web poetry run python manage.py migrate
 
 docker-test:
-	make install
+	make docker-poetry-install
 	docker-compose run --rm web poetry run python manage.py test
 
 docker-lint:
-	make install
+	make docker-poetry-install
 	docker-compose run --rm web poetry run flake8 apiv1 config manage.py
 	docker-compose run --rm web poetry run isort --check --diff apiv1 config manage.py
 	docker-compose run --rm web poetry run black --check apiv1 config manage.py
 	docker-compose run --rm web poetry run mypy apiv1 config manage.py
 
 docker-format:
-	make install
+	make docker-poetry-install
 	docker-compose run --rm web poetry run isort apiv1 config manage.py
 	docker-compose run --rm web poetry run black apiv1 config manage.py
 
