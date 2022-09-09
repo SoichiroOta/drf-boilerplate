@@ -20,7 +20,6 @@ from .base import (
 __all__ = [
     "BASE_DIR",
     "SECRET_KEY",
-    "INSTALLED_APPS",
     "MIDDLEWARE",
     "ROOT_URLCONF",
     "TEMPLATES",
@@ -40,6 +39,9 @@ __all__ = [
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+
+
+INSTALLED_APPS += ['django_extensions']
 
 DEFAULTS = {
     "DEFAULT_RENDERER_CLASSES": [
