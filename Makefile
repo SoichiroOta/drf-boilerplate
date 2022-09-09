@@ -38,3 +38,6 @@ docker-format:
 docker-check-deploy:
 	export DJANGO_SETTINGS_MODULE=config.settings.production
 	docker-compose run --rm web poetry run python manage.py check --deploy
+
+docker-generateschema:
+	docker-compose run --rm web poetry run python manage.py generateschema > openapi-schema.yml
