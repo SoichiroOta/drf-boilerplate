@@ -30,13 +30,13 @@ docker-test:
 docker-lint:
 	make docker-poetry-install
 	docker-compose run --rm web poetry run flake8 apiv1 config manage.py
-	docker-compose run --rm web poetry run isort --check --diff apiv1 config manage.py
+	docker-compose run --rm web poetry run isort --profile black --check --diff apiv1 config manage.py
 	docker-compose run --rm web poetry run black --check apiv1 config manage.py
 	docker-compose run --rm web poetry run mypy apiv1 config manage.py
 
 docker-format:
 	make docker-poetry-install
-	docker-compose run --rm web poetry run isort apiv1 config manage.py
+	docker-compose run --rm web poetry run isort --profile black apiv1 config manage.py
 	docker-compose run --rm web poetry run black apiv1 config manage.py
 
 docker-check-deploy:
