@@ -1,8 +1,9 @@
+import os
+
 from .base import (
     ALLOWED_HOSTS,
     AUTH_PASSWORD_VALIDATORS,
     BASE_DIR,
-    DATABASES,
     DEBUG,
     DEFAULT_AUTO_FIELD,
     INSTALLED_APPS,
@@ -29,7 +30,6 @@ __all__ = [
     "ROOT_URLCONF",
     "TEMPLATES",
     "WSGI_APPLICATION",
-    "DATABASES",
     "AUTH_PASSWORD_VALIDATORS",
     "LANGUAGE_CODE",
     "TIME_ZONE",
@@ -39,3 +39,11 @@ __all__ = [
     "STATIC_URL",
     "DEFAULT_AUTO_FIELD",
 ]
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}

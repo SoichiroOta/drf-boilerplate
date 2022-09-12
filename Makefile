@@ -24,6 +24,7 @@ docker-db-migrate:
 
 docker-test:
 	make docker-poetry-install
+	docker-compose run --rm web poetry run python manage.py migrate --settings=config.settings.test
 	docker-compose run --rm web poetry run coverage run --source='.' manage.py test --settings=config.settings.test
 	docker-compose run --rm web poetry run coverage report
 
