@@ -41,7 +41,7 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 
-INSTALLED_APPS += ["django_extensions"]
+INSTALLED_APPS += ["django_extensions", "silk"]
 
 DEFAULTS = {
     "DEFAULT_RENDERER_CLASSES": [
@@ -49,3 +49,7 @@ DEFAULTS = {
         "rest_framework.renderers.BrowsableAPIRenderer",
     ]
 }
+
+MIDDLEWARE += (
+    'silk.middleware.SilkyMiddleware',
+)
