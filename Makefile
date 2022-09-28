@@ -46,11 +46,11 @@ docker-check-deploy:
 
 docker-generateschema:
 	make docker-poetry-install
-	docker-compose run --rm web poetry run python manage.py generateschema > openapi-schema.yml
+	docker-compose run --rm web poetry run python manage.py generateschema > docs/openapi-schema.yml
 
 docker-graph-models:
 	make docker-poetry-install
-	docker-compose run --rm web poetry run python manage.py graph_models -a -o erd.png
+	docker-compose run --rm web poetry run python manage.py graph_models -a -o docs/erd.png
 
 docker-show-urls:
 	make docker-poetry-install
