@@ -4,7 +4,7 @@
   "python.linting.flake8Enabled": true,
   "python.linting.flake8Args": [
     "--max-line-length",
-    "88"
+    "119"
   ],
   "python.linting.mypyEnabled": true,
   "python.testing.unittestEnabled": false,
