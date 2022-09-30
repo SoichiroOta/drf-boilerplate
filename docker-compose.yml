@@ -2,13 +2,23 @@ version: "3"
 
 services:
   db:
-    image: postgres:12
-    ports:
-      - "5432"
-    env_file:
-      - envs/.env.db.local
+    image: mysql:5.7
+    platform: linux/amd64
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: django-db
+      MYSQL_USER: django
+      MYSQL_PASSWORD: django
+      TZ: 'Asia/Tokyo'
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
   web:
     build: .
+    entrypoint:
+      - dockerize
+      - -timeout
+      - 60s
+      - -wait
+      - tcp://db:3306
     command: >
       poetry run
       uvicorn config.asgi:application

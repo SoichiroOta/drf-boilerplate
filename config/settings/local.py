@@ -1,7 +1,9 @@
+import os
+from typing import Dict, Union
+
 from .base import (
     AUTH_PASSWORD_VALIDATORS,
     BASE_DIR,
-    DATABASES,
     DEFAULT_AUTO_FIELD,
     INSTALLED_APPS,
     LANGUAGE_CODE,
@@ -51,3 +53,14 @@ DEFAULTS = {
 MIDDLEWARE += (
     'silk.middleware.SilkyMiddleware',
 )
+
+DATABASES: Dict[str, Dict[str, Union[str, Dict[str, str]]]] = {
+    "default": {
+        "ENGINE": os.getenv("DATABASE_ENGINE", "django.db.backends.mysql"),
+        "NAME": os.getenv("DATABASE_NAME", "django-db"),
+        "USER": os.getenv("DATABASE_USER", "django"),
+        "PASSWORD": os.getenv("DATABASE_PASSWORD", "django"),
+        "HOST": os.getenv("DATABASE_SERVICE_HOST", "db"),
+        "PORT": os.getenv("DATABASE_SERVICE_PORT", "3306"),
+    }
+}
