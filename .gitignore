@@ -161,3 +161,4 @@ cython_debug/
 
 docs/erd.png
 docs/openapi-schema.yml
+health_check_storage_test/

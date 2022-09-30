@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 
 urlpatterns = [
+    path(r'', include('health_check.urls')),
     path("admin/", admin.site.urls),
 ]
 
