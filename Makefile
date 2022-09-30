@@ -22,6 +22,9 @@ docker-db-makemigrations:
 docker-db-migrate:
 	docker-compose exec web poetry run python manage.py migrate
 
+docker-createsuperuser:
+	docker-compose exec web poetry run python manage.py createsuperuser --noinput
+
 docker-test:
 	make docker-poetry-install
 	docker-compose run --rm web poetry run python manage.py migrate --settings=config.settings.test
