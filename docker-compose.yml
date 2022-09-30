@@ -11,7 +11,10 @@ services:
       - POSTGRES_PASSWORD=password
   web:
     build: .
-    command: poetry run python3 manage.py runserver 0.0.0.0:8000
+    command: >
+      poetry run
+      uvicorn config.asgi:application
+      --host 0.0.0.0 --reload
     volumes:
       - .:/opt/app
     ports:
