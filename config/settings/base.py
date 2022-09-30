@@ -41,12 +41,12 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "apiv1.apps.Apiv1Config",
-    'health_check',
-    'health_check.db',
-    'health_check.cache',
-    'health_check.storage',
-    'health_check.contrib.migrations',
-    'health_check.contrib.psutil',
+    "health_check",
+    "health_check.db",
+    "health_check.cache",
+    "health_check.storage",
+    "health_check.contrib.migrations",
+    "health_check.contrib.psutil",
 ]
 
 MIDDLEWARE = [

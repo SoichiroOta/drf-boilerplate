@@ -48,6 +48,4 @@ DEFAULTS = {
     ]
 }
 
-MIDDLEWARE += (
-    'silk.middleware.SilkyMiddleware',
-)
+MIDDLEWARE += ("silk.middleware.SilkyMiddleware",)
