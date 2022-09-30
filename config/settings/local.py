@@ -50,9 +50,7 @@ DEFAULTS = {
     ]
 }
 
-MIDDLEWARE += (
-    'silk.middleware.SilkyMiddleware',
-)
+MIDDLEWARE += ("silk.middleware.SilkyMiddleware",)
 
 DATABASES: Dict[str, Dict[str, Union[str, Dict[str, str]]]] = {
     "default": {
