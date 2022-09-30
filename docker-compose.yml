@@ -5,10 +5,8 @@ services:
     image: postgres:12
     ports:
       - "5432"
-    environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=password
+    env_file:
+      - envs/.env.db.local
   web:
     build: .
     command: >
@@ -22,4 +20,4 @@ services:
     depends_on:
       - db
     env_file:
-      - .env.local
+      - envs/.env.local
