@@ -1,7 +1,7 @@
 name: CI on PR
 on: pull_request
 jobs:
-  build:
+  ci-on-pr:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
