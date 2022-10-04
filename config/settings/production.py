@@ -1,5 +1,6 @@
+import os
+
 from .base import (
-    ALLOWED_HOSTS,
     AUTH_PASSWORD_VALIDATORS,
     BASE_DIR,
     DATABASES,
@@ -9,7 +10,6 @@ from .base import (
     LANGUAGE_CODE,
     MIDDLEWARE,
     ROOT_URLCONF,
-    SECRET_KEY,
     TEMPLATES,
     TIME_ZONE,
     USE_I18N,
@@ -20,9 +20,7 @@ from .base import (
 
 __all__ = [
     "BASE_DIR",
-    "SECRET_KEY",
     "DEBUG",
-    "ALLOWED_HOSTS",
     "INSTALLED_APPS",
     "MIDDLEWARE",
     "ROOT_URLCONF",
@@ -37,3 +35,21 @@ __all__ = [
     "USE_TZ",
     "DEFAULT_AUTO_FIELD",
 ]
+
+
+SECURE_HSTS_SECONDS = 60
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+SECURE_SSL_REDIRECT = True
+
+SECURE_SSL_REDIRECT = True
+
+SECRET_KEY = os.environ.get("SECRET_KEY", "_v#lx*6%3t_n@vxkk_+&%7jg2z&6peq(a_v=%r(n8l#k55%k8$")
+
+SESSION_COOKIE_SECURE = True
+
+CSRF_COOKIE_SECURE = True
+
+ALLOWED_HOSTS = os.environ["ALLOWED_HOSTS"].split(",")
+
+SECURE_HSTS_PRELOAD = True
