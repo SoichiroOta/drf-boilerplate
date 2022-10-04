@@ -44,8 +44,7 @@ docker-format:
 	docker-compose run --rm web poetry run black apiv1 config manage.py
 
 docker-check-deploy:
-	export DJANGO_SETTINGS_MODULE=config.settings.production
-	docker-compose run --rm web poetry run python manage.py check --deploy
+	docker-compose run --rm web poetry run python manage.py check --deploy --settings=config.settings.production
 
 docker-generateschema:
 	make docker-poetry-install
