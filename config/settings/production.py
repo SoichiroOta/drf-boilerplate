@@ -42,8 +42,6 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
 SECURE_SSL_REDIRECT = True
 
-SECURE_SSL_REDIRECT = True
-
 SECRET_KEY = os.environ.get("SECRET_KEY", "_v#lx*6%3t_n@vxkk_+&%7jg2z&6peq(a_v=%r(n8l#k55%k8$")
 
 SESSION_COOKIE_SECURE = True
