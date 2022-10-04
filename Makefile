@@ -57,3 +57,6 @@ docker-graph-models:
 docker-show-urls:
 	make docker-poetry-install
 	docker-compose run --rm web poetry run python manage.py show_urls
+
+docker-django-shell:
+	docker-compose exec web poetry run python manage.py shell
