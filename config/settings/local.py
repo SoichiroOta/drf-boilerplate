@@ -2,6 +2,7 @@ import os
 from typing import Dict, Union
 
 from .base import (
+    APPEND_SLASH,
     AUTH_PASSWORD_VALIDATORS,
     BASE_DIR,
     DEFAULT_AUTO_FIELD,
@@ -35,6 +36,7 @@ __all__ = [
     "USE_TZ",
     "DEFAULT_AUTO_FIELD",
     "STATIC_URL",
+    "APPEND_SLASH",
 ]
 
 

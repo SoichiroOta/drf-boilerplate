@@ -2,6 +2,7 @@ import os
 
 from .base import (
     ALLOWED_HOSTS,
+    APPEND_SLASH,
     AUTH_PASSWORD_VALIDATORS,
     BASE_DIR,
     DEBUG,
@@ -38,6 +39,7 @@ __all__ = [
     "USE_TZ",
     "DEFAULT_AUTO_FIELD",
     "STATIC_URL",
+    "APPEND_SLASH",
 ]
 
 
