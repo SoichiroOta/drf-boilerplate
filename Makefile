@@ -17,10 +17,13 @@ docker-down:
 	docker-compose down
 
 docker-db-makemigrations:
-	docker-compose exec web python manage.py makemigrations
+	docker-compose run --rm web python manage.py makemigrations
 
 docker-db-migrate:
 	docker-compose exec web python manage.py migrate
+
+docker-reset-db:
+	docker-compose exec web python manage.py reset_db --noinput
 
 docker-createsuperuser:
 	docker-compose exec web python manage.py createsuperuser --noinput
