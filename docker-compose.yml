@@ -8,9 +8,10 @@ services:
     env_file:
       - envs/.env.db.local
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.local
     command: >
-      poetry run
       uvicorn config.asgi:application
       --host 0.0.0.0 --reload
     volumes:
