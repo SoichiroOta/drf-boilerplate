@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf import settings
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import include, path
 
 urlpatterns = [
@@ -23,4 +24,7 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:
-    urlpatterns.insert(0, path("silk/", include("silk.urls", namespace="silk")))
+    urlpatterns += [
+        *staticfiles_urlpatterns(),
+        path("silk/", include("silk.urls", namespace="silk")),
+    ]
