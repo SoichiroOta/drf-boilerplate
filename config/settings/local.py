@@ -4,6 +4,7 @@ from typing import Dict, Union
 from .base import (
     APPEND_SLASH,
     AUTH_PASSWORD_VALIDATORS,
+    AUTH_USER_MODEL,
     BASE_DIR,
     DEFAULT_AUTO_FIELD,
     INSTALLED_APPS,
@@ -39,6 +40,7 @@ __all__ = [
     "STATIC_URL",
     "APPEND_SLASH",
     "STATIC_ROOT",
+    "AUTH_USER_MODEL",
 ]
 
 
