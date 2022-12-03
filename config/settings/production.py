@@ -3,6 +3,7 @@ import os
 from .base import (
     APPEND_SLASH,
     AUTH_PASSWORD_VALIDATORS,
+    AUTH_USER_MODEL,
     BASE_DIR,
     DATABASES,
     DEBUG,
@@ -40,6 +41,7 @@ __all__ = [
     "STATIC_URL",
     "APPEND_SLASH",
     "STATIC_ROOT",
+    "AUTH_USER_MODEL",
 ]
 
 
