@@ -4,6 +4,7 @@ from .base import (
     ALLOWED_HOSTS,
     APPEND_SLASH,
     AUTH_PASSWORD_VALIDATORS,
+    AUTH_USER_MODEL,
     BASE_DIR,
     DEBUG,
     DEFAULT_AUTO_FIELD,
@@ -42,6 +43,7 @@ __all__ = [
     "STATIC_URL",
     "APPEND_SLASH",
     "STATIC_ROOT",
+    "AUTH_USER_MODEL",
 ]
 
 
