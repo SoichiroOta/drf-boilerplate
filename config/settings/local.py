@@ -9,6 +9,7 @@ from .base import (
     MIDDLEWARE,
     ROOT_URLCONF,
     SECRET_KEY,
+    STATIC_ROOT,
     STATIC_URL,
     TEMPLATES,
     TIME_ZONE,
@@ -35,6 +36,7 @@ __all__ = [
     "DEFAULT_AUTO_FIELD",
     "STATIC_URL",
     "APPEND_SLASH",
+    "STATIC_ROOT",
 ]
 
 
