@@ -11,6 +11,7 @@ from .base import (
     MIDDLEWARE,
     ROOT_URLCONF,
     SECRET_KEY,
+    STATIC_URL,
     TEMPLATES,
     TIME_ZONE,
     USE_I18N,
@@ -36,6 +37,7 @@ __all__ = [
     "USE_L10N",
     "USE_TZ",
     "DEFAULT_AUTO_FIELD",
+    "STATIC_URL",
 ]
 
 
