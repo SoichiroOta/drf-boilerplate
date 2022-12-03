@@ -60,3 +60,7 @@ docker-show-urls:
 
 docker-django-shell:
 	docker-compose exec web python manage.py shell
+
+docker-collectstatic:
+	make docker-poetry-install
+	docker-compose run --rm web python manage.py collectstatic

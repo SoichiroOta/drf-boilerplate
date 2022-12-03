@@ -11,6 +11,7 @@ from .base import (
     LANGUAGE_CODE,
     MIDDLEWARE,
     ROOT_URLCONF,
+    STATIC_ROOT,
     STATIC_URL,
     TEMPLATES,
     TIME_ZONE,
@@ -38,6 +39,7 @@ __all__ = [
     "DEFAULT_AUTO_FIELD",
     "STATIC_URL",
     "APPEND_SLASH",
+    "STATIC_ROOT",
 ]
 
 
